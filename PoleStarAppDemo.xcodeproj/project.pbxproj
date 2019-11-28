@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F9117DA238D305D0014856B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9117D9238D305D0014856B /* AppDelegate.m */; };
+		6F9117E3238D305D0014856B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9117E1238D305D0014856B /* Main.storyboard */; };
+		6F9117E5238D305E0014856B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9117E4238D305E0014856B /* Assets.xcassets */; };
+		6F9117E8238D305E0014856B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9117E6238D305E0014856B /* LaunchScreen.storyboard */; };
+		6F9117EB238D305E0014856B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9117EA238D305E0014856B /* main.m */; };
+		6F9117F2238D31BC0014856B /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 6F9117F1238D31BC0014856B /* icon */; };
+		6F9117FC238D6EA90014856B /* PoleStarLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9117FB238D6EA90014856B /* PoleStarLocationProvider.m */; };
+		6F911806238D80940014856B /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F911805238D80940014856B /* HomeController.m */; };
+		6F911809238D80B10014856B /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F911808238D80B10014856B /* MenuController.m */; };
+		6F91180C238D81480014856B /* ContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F91180B238D81480014856B /* ContainerController.m */; };
+		6F911816238EBA410014856B /* MenuOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F911815238EBA410014856B /* MenuOptionCell.m */; };
+		E4430F9F9BF64DD60F556CF9 /* Pods_PoleStarAppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50903740AA5348A41D44FEC7 /* Pods_PoleStarAppDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03CE09F29B72B466DAB5DEAE /* Pods-PoleStarAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleStarAppDemo.release.xcconfig"; path = "Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo.release.xcconfig"; sourceTree = "<group>"; };
+		50903740AA5348A41D44FEC7 /* Pods_PoleStarAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PoleStarAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9117D5238D305D0014856B /* PoleStarAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoleStarAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F9117D8238D305D0014856B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6F9117D9238D305D0014856B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6F9117E2238D305D0014856B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F9117E4238D305E0014856B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F9117E7238D305E0014856B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F9117E9238D305E0014856B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F9117EA238D305E0014856B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F9117F1238D31BC0014856B /* icon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icon; sourceTree = SOURCE_ROOT; };
+		6F9117FA238D6EA90014856B /* PoleStarLocationProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoleStarLocationProvider.h; sourceTree = "<group>"; };
+		6F9117FB238D6EA90014856B /* PoleStarLocationProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoleStarLocationProvider.m; sourceTree = "<group>"; };
+		6F911804238D80940014856B /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		6F911805238D80940014856B /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		6F911807238D80B10014856B /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		6F911808238D80B10014856B /* MenuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
+		6F91180A238D81480014856B /* ContainerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainerController.h; sourceTree = "<group>"; };
+		6F91180B238D81480014856B /* ContainerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainerController.m; sourceTree = "<group>"; };
+		6F91180E238D975B0014856B /* HomeControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeControllerDelegate.h; sourceTree = "<group>"; };
+		6F911814238EBA410014856B /* MenuOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuOptionCell.h; sourceTree = "<group>"; };
+		6F911815238EBA410014856B /* MenuOptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuOptionCell.m; sourceTree = "<group>"; };
+		AF8410CF4C43383E5ECCBD2F /* Pods-PoleStarAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleStarAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F9117D2238D305D0014856B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4430F9F9BF64DD60F556CF9 /* Pods_PoleStarAppDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F9117CC238D305D0014856B = {
+			isa = PBXGroup;
+			children = (
+				6F9117D7238D305D0014856B /* PoleStarAppDemo */,
+				6F9117D6238D305D0014856B /* Products */,
+				ECA2E2EBA7ADA4E81AF18DC8 /* Pods */,
+				B83C6F81F28A01A86456E8C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6F9117D6238D305D0014856B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F9117D5238D305D0014856B /* PoleStarAppDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F9117D7238D305D0014856B /* PoleStarAppDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6F91180D238D960E0014856B /* Utils */,
+				6F911800238D7F720014856B /* Controller */,
+				6F9117FE238D7F450014856B /* Model */,
+				6F9117FD238D7F2F0014856B /* View */,
+				6F9117D8238D305D0014856B /* AppDelegate.h */,
+				6F9117D9238D305D0014856B /* AppDelegate.m */,
+				6F9117E1238D305D0014856B /* Main.storyboard */,
+				6F9117E4238D305E0014856B /* Assets.xcassets */,
+				6F9117E6238D305E0014856B /* LaunchScreen.storyboard */,
+				6F9117E9238D305E0014856B /* Info.plist */,
+				6F9117F1238D31BC0014856B /* icon */,
+				6F9117EA238D305E0014856B /* main.m */,
+			);
+			path = PoleStarAppDemo;
+			sourceTree = "<group>";
+		};
+		6F9117FD238D7F2F0014856B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F911814238EBA410014856B /* MenuOptionCell.h */,
+				6F911815238EBA410014856B /* MenuOptionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6F9117FE238D7F450014856B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6F9117FA238D6EA90014856B /* PoleStarLocationProvider.h */,
+				6F9117FB238D6EA90014856B /* PoleStarLocationProvider.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6F911800238D7F720014856B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F911804238D80940014856B /* HomeController.h */,
+				6F911805238D80940014856B /* HomeController.m */,
+				6F911807238D80B10014856B /* MenuController.h */,
+				6F911808238D80B10014856B /* MenuController.m */,
+				6F91180A238D81480014856B /* ContainerController.h */,
+				6F91180B238D81480014856B /* ContainerController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6F91180D238D960E0014856B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F91180E238D975B0014856B /* HomeControllerDelegate.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B83C6F81F28A01A86456E8C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50903740AA5348A41D44FEC7 /* Pods_PoleStarAppDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECA2E2EBA7ADA4E81AF18DC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF8410CF4C43383E5ECCBD2F /* Pods-PoleStarAppDemo.debug.xcconfig */,
+				03CE09F29B72B466DAB5DEAE /* Pods-PoleStarAppDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F9117D4238D305D0014856B /* PoleStarAppDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F9117EE238D305E0014856B /* Build configuration list for PBXNativeTarget "PoleStarAppDemo" */;
+			buildPhases = (
+				06F01894E80D17A9334CF73D /* [CP] Check Pods Manifest.lock */,
+				6F9117D1238D305D0014856B /* Sources */,
+				6F9117D2238D305D0014856B /* Frameworks */,
+				6F9117D3238D305D0014856B /* Resources */,
+				96B148EF24E995C604965594 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoleStarAppDemo;
+			productName = PoleStarAppDemo;
+			productReference = 6F9117D5238D305D0014856B /* PoleStarAppDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F9117CD238D305D0014856B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Pole Star";
+				TargetAttributes = {
+					6F9117D4238D305D0014856B = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6F9117D0238D305D0014856B /* Build configuration list for PBXProject "PoleStarAppDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F9117CC238D305D0014856B;
+			productRefGroup = 6F9117D6238D305D0014856B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F9117D4238D305D0014856B /* PoleStarAppDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F9117D3238D305D0014856B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F9117E8238D305E0014856B /* LaunchScreen.storyboard in Resources */,
+				6F9117F2238D31BC0014856B /* icon in Resources */,
+				6F9117E5238D305E0014856B /* Assets.xcassets in Resources */,
+				6F9117E3238D305D0014856B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06F01894E80D17A9334CF73D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PoleStarAppDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B148EF24E995C604965594 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F9117D1238D305D0014856B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F911809238D80B10014856B /* MenuController.m in Sources */,
+				6F911816238EBA410014856B /* MenuOptionCell.m in Sources */,
+				6F9117DA238D305D0014856B /* AppDelegate.m in Sources */,
+				6F9117FC238D6EA90014856B /* PoleStarLocationProvider.m in Sources */,
+				6F911806238D80940014856B /* HomeController.m in Sources */,
+				6F9117EB238D305E0014856B /* main.m in Sources */,
+				6F91180C238D81480014856B /* ContainerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6F9117E1238D305D0014856B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F9117E2238D305D0014856B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F9117E6238D305E0014856B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F9117E7238D305E0014856B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F9117EC238D305E0014856B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6F9117ED238D305E0014856B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F9117EF238D305E0014856B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF8410CF4C43383E5ECCBD2F /* Pods-PoleStarAppDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C4373ZES7;
+				INFOPLIST_FILE = PoleStarAppDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = polestar.PoleStarAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F9117F0238D305E0014856B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03CE09F29B72B466DAB5DEAE /* Pods-PoleStarAppDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C4373ZES7;
+				INFOPLIST_FILE = PoleStarAppDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_BUNDLE_IDENTIFIER = polestar.PoleStarAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F9117D0238D305D0014856B /* Build configuration list for PBXProject "PoleStarAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9117EC238D305E0014856B /* Debug */,
+				6F9117ED238D305E0014856B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F9117EE238D305E0014856B /* Build configuration list for PBXNativeTarget "PoleStarAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F9117EF238D305E0014856B /* Debug */,
+				6F9117F0238D305E0014856B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F9117CD238D305D0014856B /* Project object */;
+}
