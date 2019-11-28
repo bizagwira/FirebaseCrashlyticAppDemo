@@ -1,0 +1,1 @@
+PoleStarAppDemo is an example of application that shows how to use NAOSDK and Mapwize within an application.
