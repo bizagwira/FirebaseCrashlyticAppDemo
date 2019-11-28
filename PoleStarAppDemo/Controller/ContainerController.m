@@ -82,21 +82,4 @@
 }
 
 
-//- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//
-//    UITouch *touch=[[event allTouches] anyObject];
-//
-//
-//    NSLog(@"####################### [%d] %s %@", __LINE__, __FILE__, [touch view]);
-//
-//    if([touch view] == self.homeController.view)
-//    {
-//        NSLog(@"####################### [%d] %s", __LINE__, __FILE__);
-//    }
-//    else{
-//       NSLog(@"####################### [%d] %s", __LINE__, __FILE__);
-//
-//    }
-//}
-
 @end

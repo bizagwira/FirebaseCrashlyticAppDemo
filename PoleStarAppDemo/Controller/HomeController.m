@@ -47,8 +47,6 @@
     self.naoKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"naoKey"];
 
     MWZMapwizeConfiguration *mapwizeConfiguration = [MWZMapwizeConfiguration configurationWithApiKey:self.mapwizeApiKey];
-//    opts.centerOnVenueId = self.mapwizeVenueId;
-
 
     MWZMapwizeViewUISettings* settings = [[MWZMapwizeViewUISettings alloc] init];
 

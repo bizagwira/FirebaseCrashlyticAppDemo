@@ -159,6 +159,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F9117EE238D305E0014856B /* Build configuration list for PBXNativeTarget "PoleStarAppDemo" */;
 			buildPhases = (
+				6F91181723902D070014856B /* ShellScript */,
 				06F01894E80D17A9334CF73D /* [CP] Check Pods Manifest.lock */,
 				6F9117D1238D305D0014856B /* Sources */,
 				6F9117D2238D305D0014856B /* Frameworks */,
@@ -242,6 +243,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6F91181723902D070014856B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexec > ${PROJECT_DIR}/prebuild.log 2>&1\ngrep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' ${PROJECT_DIR}/Podfile.lock\n\necho \"//\" > ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"// Version.h\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"\\n\\n\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#ifndef SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#define SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\n\npatterns=$(grep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' Podfile.lock)\necho $patterns\npatterns=$(echo $patterns | sed 's/ - /,/g')\npatterns=$(echo $patterns | sed 's/- //g')\necho $patterns\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n\nIFS=',' read -r -a array <<< \"$patterns\" # patterns is read into an array as tokens separated by IFS\n\necho \"${array[0]}\"\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\nfor i in \"${array[@]}\"; do # access each element of array\n    name=$(echo \"$i\" | awk -F\"[()]\" '{print $1}')\n    name=$(echo \"$name\" | tr a-z A-Z)\n    version=$(echo \"$i\" | awk -F\"[()]\" '{print $2}')\n    echo $name\n    echo \"#define  $name  $version\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\ndone\nIFS=' ' # reset to default value after usage\n\n\necho \"\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#endif // SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n";
 		};
 		96B148EF24E995C604965594 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
