@@ -36,18 +36,19 @@
     
     self.view.backgroundColor = [UIColor purpleColor];
     
-    MWZUIOptions* opts = [[MWZUIOptions alloc] init];
-
-
     //!  Read and parse the Mapwize Apikey and venue ID
     self.mapwizeApiKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"mapwizeApiKey"];
     self.mapwizeVenueId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"mapwizeVenueId"];
 
     //! Read and parse the NAOSDK key
     self.naoKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"naoKey"];
+    
+    MWZUIOptions* opts = [[MWZUIOptions alloc] init];
+    opts.centerOnVenueId = self.mapwizeVenueId;
+
 
     MWZMapwizeConfiguration *mapwizeConfiguration = [MWZMapwizeConfiguration configurationWithApiKey:self.mapwizeApiKey];
-
+    
     MWZMapwizeViewUISettings* settings = [[MWZMapwizeViewUISettings alloc] init];
 
     self.mapwizeView = [[MWZMapwizeView alloc] initWithFrame:self.view.frame
