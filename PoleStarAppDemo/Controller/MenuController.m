@@ -9,6 +9,7 @@
 #import "MenuController.h"
 #import "MenuOptionCell.h"
 #import "NAOSDK.h"
+#import "Version.h"
 
 @interface MenuController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -79,7 +80,7 @@
     // The first row is empty for the style
     if (indexPath.row == 1) {
         NSString* title = [self.content objectAtIndex:indexPath.row];
-        NSString* message = [NSString stringWithFormat:@"NAOSDK: %@", [NAOServicesConfig getSoftwareVersion]];
+        NSString* message = [NSString stringWithFormat:@"- NAOSDK: %@\n- %s\n- %s", [NAOServicesConfig getSoftwareVersion], MAPWIZESDK, MAPWIZEUI];
         [self showAlertView:title  actionInfo:message];
     }
 }

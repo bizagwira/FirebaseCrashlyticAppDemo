@@ -44,6 +44,7 @@
 		6F91180E238D975B0014856B /* HomeControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeControllerDelegate.h; sourceTree = "<group>"; };
 		6F911814238EBA410014856B /* MenuOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuOptionCell.h; sourceTree = "<group>"; };
 		6F911815238EBA410014856B /* MenuOptionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuOptionCell.m; sourceTree = "<group>"; };
+		6F911819239117F70014856B /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
 		AF8410CF4C43383E5ECCBD2F /* Pods-PoleStarAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoleStarAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-PoleStarAppDemo/Pods-PoleStarAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +91,7 @@
 				6F9117E4238D305E0014856B /* Assets.xcassets */,
 				6F9117E6238D305E0014856B /* LaunchScreen.storyboard */,
 				6F9117E9238D305E0014856B /* Info.plist */,
+				6F911819239117F70014856B /* Version.h */,
 				6F9117F1238D31BC0014856B /* icon */,
 				6F9117EA238D305E0014856B /* main.m */,
 			);
@@ -259,7 +261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexec > ${PROJECT_DIR}/prebuild.log 2>&1\ngrep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' ${PROJECT_DIR}/Podfile.lock\n\necho \"//\" > ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"// Version.h\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"\\n\\n\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#ifndef SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#define SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\n\npatterns=$(grep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' Podfile.lock)\necho $patterns\npatterns=$(echo $patterns | sed 's/ - /,/g')\npatterns=$(echo $patterns | sed 's/- //g')\necho $patterns\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n\nIFS=',' read -r -a array <<< \"$patterns\" # patterns is read into an array as tokens separated by IFS\n\necho \"${array[0]}\"\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\nfor i in \"${array[@]}\"; do # access each element of array\n    name=$(echo \"$i\" | awk -F\"[()]\" '{print $1}')\n    name=$(echo \"$name\" | tr a-z A-Z)\n    version=$(echo \"$i\" | awk -F\"[()]\" '{print $2}')\n    echo $name\n    echo \"#define  $name  $version\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\ndone\nIFS=' ' # reset to default value after usage\n\n\necho \"\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#endif // SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexec > ${PROJECT_DIR}/prebuild.log 2>&1\ngrep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' ${PROJECT_DIR}/Podfile.lock\n\necho \"//\" > ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"// Version.h\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"//\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\necho \"\\n\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\necho \"#ifndef SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\necho \"#define SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\necho \"\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\n\npatterns=$(grep -E -i -w '^\\s*-.*\\(([0-9.]+)\\)' Podfile.lock)\necho $patterns\npatterns=$(echo $patterns | sed 's/ - /,/g')\npatterns=$(echo $patterns | sed 's/- //g')\necho $patterns\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\n\nIFS=',' read -r -a array <<< \"$patterns\" # patterns is read into an array as tokens separated by IFS\n\necho \"${array[0]}\"\necho \"xxxxxxxxxxxxxxxxxxxxxxxxxxxx\"\nfor i in \"${array[@]}\"; do # access each element of array\n    name=$(echo \"$i\" | awk -F\"[()]\" '{print $1}')\n    name=$(echo \"$name\" | tr a-z A-Z)\n    macroName=$(echo \"$name\" | sed 's/-//g')\n    version=$(echo \"$i\" | awk -F\"[()]\" '{print $2}')\n    echo \"$macroName\\t\\t\\\"$name: $version\\\"\"\n    echo \"#define  $macroName  \\\"$name: $version\\\"\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\ndone\nIFS=' ' # reset to default value after usage\n\n\necho \"\\n\\n\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n\necho \"#endif // SDK_VERSIONS\" >> ${PROJECT_DIR}/PoleStarAppDemo/Version.h\n";
 		};
 		96B148EF24E995C604965594 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
