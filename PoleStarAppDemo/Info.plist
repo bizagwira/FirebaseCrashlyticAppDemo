@@ -66,5 +66,9 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>NAO SDK will have access to your location information when using the application</string>
+	<key>naoKey</key>
+	<string>FJclSAyDA2_olh6fLPkH6Q</string>
+	<key>mapwizeApiKey</key>
+	<string>ae351551cc5b691f2447e450ea1f7f93</string>
 </dict>
 </plist>
