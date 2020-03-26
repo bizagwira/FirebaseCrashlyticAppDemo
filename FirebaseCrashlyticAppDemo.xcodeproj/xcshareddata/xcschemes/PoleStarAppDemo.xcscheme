@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6F9117D4238D305D0014856B"
-               BuildableName = "PoleStarAppDemo.app"
-               BlueprintName = "PoleStarAppDemo"
-               ReferencedContainer = "container:PoleStarAppDemo.xcodeproj">
+               BuildableName = "FirebaseCrashlyticAppDemo.app"
+               BlueprintName = "FirebaseCrashlyticAppDemo"
+               ReferencedContainer = "container:FirebaseCrashlyticAppDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F9117D4238D305D0014856B"
-            BuildableName = "PoleStarAppDemo.app"
-            BlueprintName = "PoleStarAppDemo"
-            ReferencedContainer = "container:PoleStarAppDemo.xcodeproj">
+            BuildableName = "FirebaseCrashlyticAppDemo.app"
+            BlueprintName = "FirebaseCrashlyticAppDemo"
+            ReferencedContainer = "container:FirebaseCrashlyticAppDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F9117D4238D305D0014856B"
-            BuildableName = "PoleStarAppDemo.app"
-            BlueprintName = "PoleStarAppDemo"
-            ReferencedContainer = "container:PoleStarAppDemo.xcodeproj">
+            BuildableName = "FirebaseCrashlyticAppDemo.app"
+            BlueprintName = "FirebaseCrashlyticAppDemo"
+            ReferencedContainer = "container:FirebaseCrashlyticAppDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

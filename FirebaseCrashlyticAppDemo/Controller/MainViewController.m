@@ -5,7 +5,6 @@
 //  Created by Pole Star on 25/03/2020.
 //  Copyright © 2020 Pole Star. All rights reserved.
 //
-#import <Crashlytics/Crashlytics.h>
 #import "MainViewController.h"
 #import <Firebase/Firebase.h>
 

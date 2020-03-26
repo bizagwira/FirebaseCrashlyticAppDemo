@@ -15,11 +15,21 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FirebaseCrashlyticsCollectionEnabled</key>
+	<true/>
+	<key>FIRAnalyticsDebugEnabled</key>
+	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.mapwize</string>
+	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
+	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>NAO SDK will have access to your location information when using the application</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -60,17 +70,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.mapwize</string>
-	<key>MGLMapboxMetricsEnabledSettingShownInApp</key>
-	<true/>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>NAO SDK will have access to your location information when using the application</string>
-	<key>naoKey</key>
-	<string>FJclSAyDA2_olh6fLPkH6Q</string>
 	<key>mapwizeApiKey</key>
 	<string>ae351551cc5b691f2447e450ea1f7f93</string>
 	<key>mapwizeVenueId</key>
 	<string>5dd672e43a0f2c001677466a</string>
+	<key>naoKey</key>
+	<string>FJclSAyDA2_olh6fLPkH6Q</string>
 </dict>
 </plist>
