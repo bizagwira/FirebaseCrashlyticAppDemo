@@ -25,7 +25,8 @@
     [FIRApp configure];
     
 //    [Fabric.sharedSDK setDebug:YES];
-    [FIRCrashlytics crashlytics];
+//    [FIRCrashlytics crashlytics];
+    [[FIRCrashlytics crashlytics] setCrashlyticsCollectionEnabled:YES];
 
     NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:
                                   NSLocalizedString(@"The request failed.", nil),NSLocalizedDescriptionKey,
